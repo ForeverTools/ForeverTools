@@ -60,7 +60,7 @@ Project location: C:\xampp2\htdocs\git_projects\ForeverTools\
 
 ### For Each New Package:
 
-1. **Build & Test**
+1. **Build & Test Locally**
    ```powershell
    cd C:\xampp2\htdocs\git_projects\ForeverTools
    dotnet build -c Release
@@ -72,23 +72,36 @@ Project location: C:\xampp2\htdocs\git_projects\ForeverTools\
    dotnet pack src/ForeverTools.{PackageName}/ForeverTools.{PackageName}.csproj -c Release -o ./packages
    ```
 
-3. **Publish to NuGet**
+3. **Publish to NuGet FIRST**
    ```powershell
    dotnet nuget push packages/ForeverTools.{PackageName}.1.0.0.nupkg --api-key $env:NUGET_API_KEY --source https://api.nuget.org/v3/index.json
    ```
 
-4. **Create GitHub Repo** (if separate repo per package)
-   - Create repo: `ForeverTools/ForeverTools.{PackageName}`
-   - Push code
-   - Enable GitHub Actions
+4. **Wait & Test NuGet Package (BEFORE GitHub)**
+   - Wait 15-30 min for indexing
+   - Test installation in fresh project:
+   ```powershell
+   dotnet new console -n TestInstall -o C:\xampp2\htdocs\git_projects\TestInstall
+   cd C:\xampp2\htdocs\git_projects\TestInstall
+   dotnet add package ForeverTools.{PackageName}
+   dotnet run
+   ```
 
-5. **Update Organization README**
+5. **Push to GitHub (AFTER testing)**
+   Only after NuGet package verified working:
+   ```powershell
+   cd C:\xampp2\htdocs\git_projects\ForeverTools
+   git add .
+   git commit -m "Release ForeverTools.{PackageName} v1.0.0"
+   git push
+   ```
+
+6. **Update Organization README**
    - Edit `docs/README_TEMPLATE.md` - add new package to table
    - Push to https://github.com/ForeverTools/ForeverTools
 
-6. **Update Tracking Docs**
-   - `docs/CURRENT_TASKS.md` - mark package as published
-   - `docs/MASTER_PLAN.md` - update completed packages table
+7. **Update Tracking Docs**
+   - `docs/CURRENT_TASKS.md` - mark package as tested & published
    - `CHANGELOG.md` - add version entry
 
 ---

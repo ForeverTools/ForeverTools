@@ -93,23 +93,41 @@ dotnet nuget push packages/ForeverTools.AIML.1.0.0.nupkg --api-key YOUR_API_KEY 
 dotnet nuget push packages/ForeverTools.AIML.1.0.0.snupkg --api-key $env:NUGET_API_KEY --source https://api.nuget.org/v3/index.json
 ```
 
-### Step 4: Wait for Indexing
+### Step 4: Wait for Indexing & Test (BEFORE GitHub)
 
-- Package appears immediately at: `https://www.nuget.org/packages/ForeverTools.AIML/`
-- **BUT** it takes 15-30 minutes before it's searchable
-- Full indexing can take up to a few hours
+**IMPORTANT:** Test the NuGet package BEFORE pushing to GitHub.
 
-### Step 5: Verify Publication
+- Package takes 15-30 minutes to index
+- Wait, then test installation:
 
-1. Go to https://www.nuget.org/packages/ForeverTools.AIML/
-2. Check that README displays correctly
-3. Verify all metadata (description, tags, license)
-4. Test installation:
-   ```powershell
-   dotnet new console -n TestInstall
-   cd TestInstall
-   dotnet add package ForeverTools.AIML
-   ```
+```powershell
+# Create test project
+dotnet new console -n TestInstall -o C:\xampp2\htdocs\git_projects\TestInstall
+cd C:\xampp2\htdocs\git_projects\TestInstall
+
+# Install package (will fail if not indexed yet - wait and retry)
+dotnet add package ForeverTools.AIML
+
+# Add test code to Program.cs and run
+dotnet run
+```
+
+**Test checklist:**
+- [ ] Package installs successfully
+- [ ] Code compiles with `using ForeverTools.AIML;`
+- [ ] IntelliSense shows classes and methods
+- [ ] Basic functionality works
+
+### Step 5: Push to GitHub (AFTER testing)
+
+Only after NuGet package is verified working:
+
+```powershell
+cd C:\xampp2\htdocs\git_projects\ForeverTools
+git add .
+git commit -m "Release ForeverTools.{Package} v1.0.0"
+git push
+```
 
 ---
 
