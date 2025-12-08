@@ -1,0 +1,48 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet packages
+packages/
+*.nupkg
+*.snupkg
+
+# Test results
+[Tt]est[Rr]esults/
+*.trx
+coverage.*
+
+# Build artifacts
+artifacts/
+publish/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+*.local
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+# Project-specific
+*.DotSettings.user
