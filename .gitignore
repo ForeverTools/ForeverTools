@@ -47,8 +47,8 @@ appsettings.*.json
 # Project-specific
 *.DotSettings.user
 
-# Private documents (DO NOT COMMIT)
-CLAUDE_PROMPT.md
-docs/CURRENT_TASKS.md
-docs/MASTER_PLAN.md
-docs/DISTRIBUTION_GUIDE.md
+# Private/local files
+*.private.md
+*.local.md
+docs/*.private.md
+tools/
