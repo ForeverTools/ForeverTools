@@ -1,159 +1,123 @@
-# Current Tasks Checklist
+# Current Tasks
 
-This document tracks what needs to be done before publishing each package.
-
----
-
-## BEFORE FIRST PUBLISH (One-Time Setup)
-
-### Account Setup
-- [x] Create NuGet.org account: https://www.nuget.org/users/account/LogOn
-  - **Username:** ForeverTools
-  - **Profile:** https://www.nuget.org/profiles/ForeverTools
-- [x] Generate NuGet API key (see DISTRIBUTION_GUIDE.md)
-  - **Glob Pattern:** `ForeverTools.*`
-  - **Expires:** December 2025
-- [ ] Store API key in environment variable `NUGET_API_KEY`
-- [x] Create GitHub account (if not already)
-  - **Username:** ForeverTools
-  - **Main repo:** https://github.com/ForeverTools/ForeverTools
-
-### Affiliate Account Registration
-Register for each service's affiliate program BEFORE publishing:
-
-| Service | Affiliate Signup URL | Code | Status |
-|---------|---------------------|------|--------|
-| AI/ML API | https://aimlapi.getrewardful.com/signup | `?via=forevertools` | [x] Registered |
-| 2Captcha | https://2captcha.com/affiliate | `soft_id: 2482` | [x] Registered |
-| Anti-Captcha | https://anti-captcha.com/clients/tools/devcenter | - | [ ] Registered |
-| CapSolver | https://dashboard.capsolver.com/dashboard/affiliate | - | [ ] Registered |
-| BrightData | https://brightdata.com/affiliate | - | [ ] Registered |
-| ScraperAPI | https://www.scraperapi.com/affiliates/ | - | [ ] Registered |
-| SmartProxy | https://smartproxy.com/affiliate | - | [ ] Registered |
-| APILayer | https://apilayer.com/affiliates/ | - | [ ] Registered |
-| Postmark | https://postmarkapp.com/lp/referral-partner-program | - | [ ] Registered |
-| BulkGate | https://www.bulkgate.com/en/partners/ | - | [ ] Registered |
+Rolling task list - most important at top. Update as tasks complete.
 
 ---
 
-## Package #1: ForeverTools.AIML
+## NOW - Priority Tasks
 
-### Affiliate Setup
-- [x] Register at: https://aimlapi.getrewardful.com/signup
-- [x] Affiliate code: `?via=forevertools` (already embedded in code)
-- [x] All affiliate links updated
+### 1. Test ForeverTools.AIML NuGet Installation
+Package published, waiting for indexing (~15-30 min). Then test:
 
-### Affiliate Link Locations (for reference)
-
-**Code:** `?via=forevertools` (CONFIRMED CORRECT)
-
-| File | Line(s) | Current | Action |
-|------|---------|---------|--------|
-| `README.md` | Multiple | `aimlapi.com?via=forevertools` | Find & Replace all |
-| `src/ForeverTools.AIML/AimlApiOptions.cs` | ~15 | `aimlapi.com?via=forevertools` | Update comment |
-| `src/ForeverTools.AIML/AimlApiClient.cs` | ~24, 35, 173 | `aimlapi.com?via=forevertools` | Update comments |
-| `src/ForeverTools.AIML/Models/AimlModels.cs` | ~8 | `aimlapi.com?via=forevertools` | Update comment |
-| `src/ForeverTools.AIML/Extensions/ServiceCollectionExtensions.cs` | ~15 | `aimlapi.com?via=forevertools` | Update comment |
-
-**How to update all at once (PowerShell):**
 ```powershell
-cd C:\xampp2\htdocs\git_projects\ForeverTools
-$files = Get-ChildItem -Recurse -Include *.cs,*.md | Where-Object { $_.FullName -notmatch '\\obj\\|\\bin\\' }
-foreach ($file in $files) {
-    (Get-Content $file.FullName) -replace '\?via=forevertools', '?via=YOUR_ACTUAL_CODE' | Set-Content $file.FullName
-}
+# Create test project
+dotnet new console -n TestAimlInstall -o C:\xampp2\htdocs\git_projects\TestAimlInstall
+cd C:\xampp2\htdocs\git_projects\TestAimlInstall
+
+# Install package
+dotnet add package ForeverTools.AIML
+
+# Verify IntelliSense works - add this to Program.cs:
+# using ForeverTools.AIML;
+# var client = new AimlApiClient("test");
 ```
 
-### Pre-Publish Checklist
-- [x] Package builds without errors (`dotnet build -c Release`)
-- [x] Tests pass (run `dotnet test`)
-- [x] Package packs successfully (`dotnet pack -c Release`)
-- [ ] Affiliate account registered
-- [ ] Affiliate code updated in all files
-- [ ] Icon converted from SVG to PNG (128x128)
-- [ ] README looks correct (open in VS Code preview)
-- [ ] Version number is correct in .csproj
+**Verification Checklist:**
+- [ ] Package installs successfully
+- [ ] IntelliSense shows `AimlApiClient`, `AimlModels`, etc.
+- [ ] XML documentation appears in tooltips
+- [ ] Package page looks correct: https://www.nuget.org/packages/ForeverTools.AIML
 
-### Publish Steps
-```powershell
-cd C:\xampp2\htdocs\git_projects\ForeverTools
-dotnet pack src/ForeverTools.AIML/ForeverTools.AIML.csproj -c Release -o ./packages
-dotnet nuget push packages/ForeverTools.AIML.1.0.0.nupkg --api-key $env:NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+### 2. Test with Real API Key (Optional but Recommended)
+If you have an AI/ML API key, test actual functionality:
+
+```csharp
+using ForeverTools.AIML;
+
+var client = new AimlApiClient("your-actual-api-key");
+var response = await client.ChatAsync("Say hello in 5 words or less");
+Console.WriteLine(response);
 ```
 
-### Post-Publish Verification
-- [ ] Package visible at https://www.nuget.org/packages/ForeverTools.AIML/
-- [ ] README displays correctly
-- [ ] Can install: `dotnet add package ForeverTools.AIML`
-- [ ] IntelliSense works in test project
+### 3. Update GitHub Organization README
+After confirming package works, copy `docs/README_TEMPLATE.md` content to:
+https://github.com/ForeverTools/ForeverTools (edit README.md)
 
 ---
 
-## Important Notes on Affiliate Updates
+## NEXT - Upcoming Tasks
 
-### Q: What happens if I change my affiliate code after publishing?
+### 4. Build ForeverTools.Captcha
+- Affiliate ready: `soft_id: 2482` (2Captcha)
+- Multi-provider: 2Captcha, Anti-Captcha, CapSolver
+- Same structure as AIML package
 
-**For Link-Based Affiliates (like AI/ML API):**
-- The links are in README.md and XML comments
-- Users who already downloaded v1.0.0 have the OLD README in their local cache
-- **BUT** the NuGet.org package page shows your UPDATED README
-- New users see updated links, existing users keep old version
-- **Impact:** Minimal - most signups come from NuGet page, not cached README
+### 5. Register More Affiliate Accounts
+Before building each package, register for affiliates:
 
-**For API-Embedded Affiliates (like Captcha packages):**
-- The affiliate ID is compiled INTO the DLL
-- Users who downloaded v1.0.0 will ALWAYS use the affiliate ID from that version
-- To change it, you must publish v1.0.1
-- **Impact:** Higher - you'd need users to update their package
-
-### Q: Should I worry about this?
-
-**No, because:**
-1. You're setting up affiliate accounts ONCE, before first publish
-2. Your affiliate ID won't change
-3. If a service changes your ID, publish a new version
-
-### Q: Can I pre-register affiliate accounts before building packages?
-
-**Yes! Recommended approach:**
-1. Register for ALL affiliate programs now (see list above)
-2. Note down all your affiliate codes
-3. Update packages before publishing
+| Service | Signup URL | Status |
+|---------|------------|--------|
+| Anti-Captcha | https://anti-captcha.com/clients/tools/devcenter | [ ] |
+| CapSolver | https://dashboard.capsolver.com/dashboard/affiliate | [ ] |
+| ScraperAPI | https://www.scraperapi.com/affiliates/ | [ ] |
+| BrightData | https://brightdata.com/affiliate | [ ] |
 
 ---
 
-## Package Status Tracker
+## DONE - Completed Tasks
 
-| Package | Built | Tested | Affiliate | Published | NuGet URL |
-|---------|-------|--------|-----------|-----------|-----------|
-| ForeverTools.AIML | Yes | Yes | Yes | **Yes** | [NuGet](https://www.nuget.org/packages/ForeverTools.AIML) |
-| ForeverTools.Captcha | No | No | No | No | - |
-| ForeverTools.ScraperAPI | No | No | No | No | - |
-| ForeverTools.BrightData | No | No | No | No | - |
-| ForeverTools.APILayer | No | No | No | No | - |
+### ForeverTools.AIML - Published
+- [x] Build package (multi-target: net8.0, net6.0, netstandard2.0)
+- [x] 21 unit tests passing
+- [x] Affiliate link embedded (`?via=forevertools`)
+- [x] Icon created (SVG→PNG)
+- [x] Push to GitHub: https://github.com/ForeverTools/ForeverTools
+- [x] Push to NuGet: https://www.nuget.org/packages/ForeverTools.AIML
+- [ ] **Verify installation works** ← Current task
+
+### One-Time Setup - Complete
+- [x] NuGet account: ForeverTools
+- [x] GitHub account: ForeverTools
+- [x] API key set in environment variable
+- [x] SVG→PNG converter tool created
 
 ---
 
-## Quick Commands Reference
+## Package Status
+
+| Package | Status | NuGet |
+|---------|--------|-------|
+| ForeverTools.AIML | Published - Testing | [Link](https://www.nuget.org/packages/ForeverTools.AIML) |
+| ForeverTools.Captcha | Next | - |
+| ForeverTools.ScraperAPI | Planned | - |
+| ForeverTools.BrightData | Planned | - |
+
+---
+
+## Registered Affiliate Codes
+
+| Service | Code | Type |
+|---------|------|------|
+| AI/ML API | `?via=forevertools` | Link-based (30%) |
+| 2Captcha | `soft_id: 2482` | API-embedded (10%) |
+
+---
+
+## Quick Commands
 
 ```powershell
-# Build all
+# Test package install
+dotnet new console -n TestInstall
+cd TestInstall
+dotnet add package ForeverTools.AIML
+
+# Build & test solution
+cd C:\xampp2\htdocs\git_projects\ForeverTools
 dotnet build -c Release
-
-# Run tests
 dotnet test
 
-# Pack specific package
-dotnet pack src/ForeverTools.AIML/ForeverTools.AIML.csproj -c Release -o ./packages
-
-# Publish to NuGet
-dotnet nuget push packages/ForeverTools.AIML.1.0.0.nupkg --api-key $env:NUGET_API_KEY --source https://api.nuget.org/v3/index.json
-
-# Find and replace affiliate code in all files
-$files = Get-ChildItem -Recurse -Include *.cs,*.md | Where-Object { $_.FullName -notmatch '\\obj\\|\\bin\\' }
-foreach ($file in $files) {
-    (Get-Content $file.FullName) -replace 'OLD_CODE', 'NEW_CODE' | Set-Content $file.FullName
-}
+# Convert SVG to PNG
+dotnet run --project tools/SvgToPng -- "assets/icon.svg" "assets/icon.png" 128
 ```
 
 ---
