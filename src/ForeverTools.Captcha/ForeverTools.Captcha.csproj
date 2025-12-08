@@ -10,11 +10,11 @@
 
     <!-- NuGet Package Metadata -->
     <PackageId>ForeverTools.Captcha</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
-    <Description>Multi-provider captcha solving for .NET. Supports 2Captcha, CapSolver, and Anti-Captcha with a unified API. Solve reCAPTCHA v2/v3, hCaptcha, Cloudflare Turnstile, FunCaptcha, and image captchas.</Description>
-    <PackageTags>captcha;recaptcha;hcaptcha;turnstile;captcha-solver;2captcha;capsolver;anti-captcha;recaptcha-v2;recaptcha-v3;cloudflare;funcaptcha;automation;web-scraping;bot;api;sdk;dotnet;forevertools</PackageTags>
+    <Description>Multi-provider captcha solving SDK for .NET. Solve Google reCAPTCHA v2/v3, hCaptcha, Cloudflare Turnstile, FunCaptcha/Arkose, GeeTest, and image captchas. Supports 2Captcha, CapSolver, Anti-Captcha with automatic failover. Best captcha bypass library for C# web scraping and automation.</Description>
+    <PackageTags>captcha;recaptcha;hcaptcha;turnstile;captcha-solver;2captcha;capsolver;anti-captcha;recaptcha-v2;recaptcha-v3;cloudflare;funcaptcha;geetest;arkose;google-recaptcha;image-captcha;bypass;api;dotnet;forevertools</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

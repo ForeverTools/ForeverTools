@@ -10,13 +10,13 @@
 
     <!-- NuGet Package Metadata -->
     <PackageId>ForeverTools.AIML</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
-    <Description>Access 400+ AI models (GPT-4, Claude, Llama, Gemini, Stable Diffusion, DALL-E, and more) through a single unified API. Built on AI/ML API with OpenAI-compatible interface for easy integration.</Description>
-    <PackageTags>ai;ml;openai;gpt;gpt-4;claude;llama;gemini;chatgpt;artificial-intelligence;machine-learning;text-generation;image-generation;embeddings;api;sdk;dotnet;aspnetcore;forevertools</PackageTags>
-    <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools.AIML</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ForeverTools/ForeverTools.AIML</RepositoryUrl>
+    <Description>Access 400+ AI models through one unified .NET API. Supports OpenAI GPT-4o, GPT-4 Turbo, ChatGPT, Claude 3, Anthropic, Llama 3, Gemini, Mistral, DALL-E 3, Stable Diffusion, Whisper and more. OpenAI-compatible SDK with chat completions, image generation, embeddings, and audio transcription. Perfect OpenAI alternative for C# developers.</Description>
+    <PackageTags>openai;chatgpt;gpt-4;gpt-4o;claude;anthropic;llama;gemini;dall-e;stable-diffusion;ai;llm;text-generation;image-generation;embeddings;whisper;chat-completion;api;dotnet;forevertools</PackageTags>
+    <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
