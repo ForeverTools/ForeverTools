@@ -49,8 +49,10 @@ Updated main README.md with organization overview. Detailed AIML docs moved to `
 ## NEXT - Upcoming Tasks
 
 ### 4. Build ForeverTools.Captcha
-- Affiliate ready: `soft_id: 2482` (2Captcha)
-- Multi-provider: 2Captcha, Anti-Captcha, CapSolver
+All three providers have affiliate codes ready:
+- **2Captcha:** `soft_id: 2482` (API-embedded, 10%)
+- **CapSolver:** App ID `0E76F2D8-D6C0-41DD-A3B6-3708694C47B0` (API-embedded, 5-20%)
+- **Anti-Captcha:** Link-based referral (10%)
 - Same structure as AIML package
 
 ### 5. Register More Affiliate Accounts
@@ -58,9 +60,10 @@ Before building each package, register for affiliates:
 
 | Service | Signup URL | Status |
 |---------|------------|--------|
-| Anti-Captcha | https://anti-captcha.com/clients/tools/devcenter | [ ] |
-| CapSolver | https://dashboard.capsolver.com/dashboard/affiliate | [ ] |
-| ScraperAPI | https://www.scraperapi.com/affiliates/ | [ ] |
+| Anti-Captcha | https://anti-captcha.com/clients/tools/devcenter | [x] Registered |
+| CapSolver | https://dashboard.capsolver.com/dashboard/affiliate | [x] Registered |
+| ScraperAPI | https://www.scraperapi.com/affiliates/ | [x] Registered |
+| APILayer | https://apilayer.firstpromoter.com | [x] Registered |
 | BrightData | https://brightdata.com/affiliate | [ ] |
 
 ---
@@ -87,12 +90,13 @@ Before building each package, register for affiliates:
 
 ## Package Status
 
-| Package | Status | NuGet |
-|---------|--------|-------|
-| ForeverTools.AIML | Published - Testing | [Link](https://www.nuget.org/packages/ForeverTools.AIML) |
-| ForeverTools.Captcha | Next | - |
-| ForeverTools.ScraperAPI | Planned | - |
-| ForeverTools.BrightData | Planned | - |
+| Package | Status | Affiliate Ready | NuGet |
+|---------|--------|-----------------|-------|
+| ForeverTools.AIML | Published | Yes | [Link](https://www.nuget.org/packages/ForeverTools.AIML) |
+| ForeverTools.Captcha | **Next** | Yes (2Captcha, CapSolver, Anti-Captcha) | - |
+| ForeverTools.ScraperAPI | Planned | Yes (50% recurring!) | - |
+| ForeverTools.APILayer | Planned | Yes (15-20%) | - |
+| ForeverTools.BrightData | Planned | No | - |
 
 ---
 
@@ -102,6 +106,10 @@ Before building each package, register for affiliates:
 |---------|------|------|
 | AI/ML API | `?via=forevertools` | Link-based (30%) |
 | 2Captcha | `soft_id: 2482` | API-embedded (10%) |
+| CapSolver | App ID: `0E76F2D8-D6C0-41DD-A3B6-3708694C47B0` | API-embedded (5-20%) |
+| Anti-Captcha | `https://getcaptchasolution.com/03pywzqopu` | Link-based (10%) |
+| ScraperAPI | `?fp_ref=chris88` | Link-based (50%) |
+| APILayer | `?fpr=chris72` | Link-based (15-20%) |
 
 ---
 

@@ -42,6 +42,11 @@ Project location: C:\xampp2\htdocs\git_projects\ForeverTools\
 |---------|------|-----------|------------|
 | AI/ML API | Link-based | `https://aimlapi.com?via=forevertools` | 30% recurring |
 | 2Captcha | API-embedded | `soft_id: 2482` | 10% |
+| CapSolver | API-embedded | App ID: `0E76F2D8-D6C0-41DD-A3B6-3708694C47B0` | 5-20% |
+| CapSolver | Link-based | `https://dashboard.capsolver.com/passport/register?inviteCode=n2xFnv9zTix7` | - |
+| Anti-Captcha | Link-based | `https://getcaptchasolution.com/03pywzqopu` | 10% |
+| ScraperAPI | Link-based | `https://www.scraperapi.com?fp_ref=chris88` | 50% recurring |
+| APILayer | Link-based | `https://apilayer.com?fpr=chris72` | 15-20% |
 
 **Future packages should use these codes. AI/ML API link is already embedded in ForeverTools.AIML.**
 
@@ -52,7 +57,9 @@ Project location: C:\xampp2\htdocs\git_projects\ForeverTools\
 | Package | Built | Tested | Affiliate | Published | Notes |
 |---------|-------|--------|-----------|-----------|-------|
 | ForeverTools.AIML | Yes | Yes (21 tests) | Yes | **Yes** | [NuGet](https://www.nuget.org/packages/ForeverTools.AIML) |
-| ForeverTools.Captcha | No | No | Yes (2482) | No | Next priority |
+| ForeverTools.Captcha | No | No | Yes (3 providers) | No | Next priority |
+| ForeverTools.ScraperAPI | No | No | Yes (50%!) | No | High commission |
+| ForeverTools.APILayer | No | No | Yes (15-20%) | No | 23+ APIs |
 
 ---
 
@@ -204,8 +211,12 @@ dotnet run --project tools/SvgToPng -- "assets/icon.svg" "assets/icon.png" 128
 
 - [AI/ML API](https://aimlapi.com?via=forevertools) - 400+ AI models
 - [AI/ML API Docs](https://docs.aimlapi.com/)
-- [NuGet Publishing Docs](https://docs.microsoft.com/en-us/nuget/nuget-org/publish-a-package)
 - [2Captcha API](https://2captcha.com/2captcha-api) - Use soft_id: 2482
+- [CapSolver API](https://docs.capsolver.com/) - Use App ID: 0E76F2D8-D6C0-41DD-A3B6-3708694C47B0
+- [Anti-Captcha API](https://anti-captcha.com/apidoc)
+- [ScraperAPI](https://www.scraperapi.com?fp_ref=chris88) - 50% recurring commission
+- [APILayer](https://apilayer.com?fpr=chris72) - 23+ APIs (geo, currency, phone, email, etc.)
+- [NuGet Publishing Docs](https://docs.microsoft.com/en-us/nuget/nuget-org/publish-a-package)
 
 ---
 
