@@ -126,7 +126,7 @@ dotnet nuget push packages/ForeverTools.AIML.1.0.0.nupkg --api-key $env:NUGET_AP
 
 | Package | Built | Tested | Affiliate | Published | NuGet URL |
 |---------|-------|--------|-----------|-----------|-----------|
-| ForeverTools.AIML | Yes | Yes | Pending | No | - |
+| ForeverTools.AIML | Yes | Yes | Yes | **Yes** | [NuGet](https://www.nuget.org/packages/ForeverTools.AIML) |
 | ForeverTools.Captcha | No | No | No | No | - |
 | ForeverTools.ScraperAPI | No | No | No | No | - |
 | ForeverTools.BrightData | No | No | No | No | - |

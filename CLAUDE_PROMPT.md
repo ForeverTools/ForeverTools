@@ -51,7 +51,7 @@ Project location: C:\xampp2\htdocs\git_projects\ForeverTools\
 
 | Package | Built | Tested | Affiliate | Published | Notes |
 |---------|-------|--------|-----------|-----------|-------|
-| ForeverTools.AIML | Yes | Yes (21 tests) | Yes | No | Ready to publish |
+| ForeverTools.AIML | Yes | Yes (21 tests) | Yes | **Yes** | [NuGet](https://www.nuget.org/packages/ForeverTools.AIML) |
 | ForeverTools.Captcha | No | No | Yes (2482) | No | Next priority |
 
 ---
