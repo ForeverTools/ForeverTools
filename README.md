@@ -6,11 +6,12 @@
 
 | Package | Description | NuGet |
 |---------|-------------|-------|
-| [ForeverTools.AIML](docs/AIML_README.md) | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
+| **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
+| **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
 
 ## Coming Soon
 
-- **ForeverTools.Captcha** - Multi-provider captcha solving (Anti-Captcha, 2Captcha, CapSolver)
+- **ForeverTools.Postmark** - Transactional email (Postmark)
 - **ForeverTools.Proxy** - Proxy rotation (BrightData, SmartProxy, ScraperAPI)
 - **ForeverTools.SMS** - SMS & messaging (BulkGate, Textmagic)
 
@@ -21,6 +22,9 @@ All packages are available on NuGet:
 ```bash
 # AI/ML (400+ AI models)
 dotnet add package ForeverTools.AIML
+
+# Captcha solving (reCAPTCHA, hCaptcha, Turnstile)
+dotnet add package ForeverTools.Captcha
 ```
 
 ## Quick Examples
@@ -41,13 +45,42 @@ var imageUrl = await client.GenerateImageAsync("A sunset over mountains");
 var vector = await client.EmbedAsync("Hello world");
 ```
 
+### Captcha Solving
+```csharp
+using ForeverTools.Captcha;
+
+// Use your preferred provider
+var client = CaptchaClient.For2Captcha("your-api-key");
+// or: CaptchaClient.ForCapSolver("your-api-key");
+// or: CaptchaClient.ForAntiCaptcha("your-api-key");
+
+// Solve reCAPTCHA v2
+var result = await client.SolveReCaptchaV2Async(
+    "https://example.com",
+    "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-"
+);
+
+if (result.Success)
+{
+    Console.WriteLine($"Token: {result.Solution}");
+}
+
+// Also supports: reCAPTCHA v3, hCaptcha, Turnstile, FunCaptcha, Image
+```
+
 ### ASP.NET Core
 ```csharp
 // Program.cs
 builder.Services.AddForeverToolsAiml("your-api-key");
+builder.Services.AddForeverToolsCaptcha(options =>
+{
+    options.TwoCaptchaApiKey = "your-2captcha-key";
+    options.DefaultProvider = CaptchaProvider.TwoCaptcha;
+});
 
 // Or from configuration
 builder.Services.AddForeverToolsAiml(builder.Configuration);
+builder.Services.AddForeverToolsCaptcha(builder.Configuration);
 ```
 
 ## Features
