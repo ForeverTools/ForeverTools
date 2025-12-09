@@ -8,10 +8,10 @@
 |---------|-------------|-------|
 | **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
+| **ForeverTools.Postmark** | Transactional email sending with templates and tracking | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Postmark.svg)](https://www.nuget.org/packages/ForeverTools.Postmark) |
 
 ## Coming Soon
 
-- **ForeverTools.Postmark** - Transactional email (Postmark)
 - **ForeverTools.Proxy** - Proxy rotation (BrightData, SmartProxy, ScraperAPI)
 - **ForeverTools.SMS** - SMS & messaging (BulkGate, Textmagic)
 
@@ -25,6 +25,9 @@ dotnet add package ForeverTools.AIML
 
 # Captcha solving (reCAPTCHA, hCaptcha, Turnstile)
 dotnet add package ForeverTools.Captcha
+
+# Transactional email (Postmark)
+dotnet add package ForeverTools.Postmark
 ```
 
 ## Quick Examples
@@ -68,6 +71,28 @@ if (result.Success)
 // Also supports: reCAPTCHA v3, hCaptcha, Turnstile, FunCaptcha, Image
 ```
 
+### Postmark Email
+```csharp
+using ForeverTools.Postmark;
+
+var client = new PostmarkClient("your-server-token");
+
+// Send an email
+var result = await client.SendEmailAsync(
+    to: "recipient@example.com",
+    subject: "Hello from Postmark!",
+    htmlBody: "<h1>Welcome!</h1><p>This is a test email.</p>",
+    from: "sender@yourdomain.com"
+);
+
+if (result.Success)
+{
+    Console.WriteLine($"Sent! Message ID: {result.MessageId}");
+}
+
+// Also supports: batch sending, templates, attachments, bounce tracking
+```
+
 ### ASP.NET Core
 ```csharp
 // Program.cs
@@ -77,10 +102,12 @@ builder.Services.AddForeverToolsCaptcha(options =>
     options.TwoCaptchaApiKey = "your-2captcha-key";
     options.DefaultProvider = CaptchaProvider.TwoCaptcha;
 });
+builder.Services.AddForeverToolsPostmark("your-server-token");
 
 // Or from configuration
 builder.Services.AddForeverToolsAiml(builder.Configuration);
 builder.Services.AddForeverToolsCaptcha(builder.Configuration);
+builder.Services.AddForeverToolsPostmark(builder.Configuration);
 ```
 
 ## Features
