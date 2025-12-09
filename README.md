@@ -9,10 +9,11 @@
 | **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
 | **ForeverTools.Postmark** | Transactional email sending with templates and tracking | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Postmark.svg)](https://www.nuget.org/packages/ForeverTools.Postmark) |
+| **ForeverTools.ScraperAPI** | Web scraping with proxy rotation and CAPTCHA bypass | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ScraperAPI.svg)](https://www.nuget.org/packages/ForeverTools.ScraperAPI) |
 
 ## Coming Soon
 
-- **ForeverTools.Proxy** - Proxy rotation (BrightData, SmartProxy, ScraperAPI)
+- **ForeverTools.Proxy** - Proxy rotation (BrightData, SmartProxy)
 - **ForeverTools.SMS** - SMS & messaging (BulkGate, Textmagic)
 
 ## Installation
@@ -28,6 +29,9 @@ dotnet add package ForeverTools.Captcha
 
 # Transactional email (Postmark)
 dotnet add package ForeverTools.Postmark
+
+# Web scraping (ScraperAPI)
+dotnet add package ForeverTools.ScraperAPI
 ```
 
 ## Quick Examples
@@ -93,6 +97,24 @@ if (result.Success)
 // Also supports: batch sending, templates, attachments, bounce tracking
 ```
 
+### Web Scraping
+```csharp
+using ForeverTools.ScraperAPI;
+
+var client = new ScraperApiClient("your-api-key");
+
+// Simple scrape
+var html = await client.ScrapeAsync("https://example.com");
+
+// With JavaScript rendering (for SPAs)
+var rendered = await client.ScrapeWithJavaScriptAsync("https://spa-site.com");
+
+// Take a screenshot
+var screenshot = await client.TakeScreenshotBytesAsync("https://example.com");
+
+// Also supports: geo-targeting, premium proxies, async jobs, auto-parsing
+```
+
 ### ASP.NET Core
 ```csharp
 // Program.cs
@@ -103,11 +125,13 @@ builder.Services.AddForeverToolsCaptcha(options =>
     options.DefaultProvider = CaptchaProvider.TwoCaptcha;
 });
 builder.Services.AddForeverToolsPostmark("your-server-token");
+builder.Services.AddForeverToolsScraperApi("your-api-key");
 
 // Or from configuration
 builder.Services.AddForeverToolsAiml(builder.Configuration);
 builder.Services.AddForeverToolsCaptcha(builder.Configuration);
 builder.Services.AddForeverToolsPostmark(builder.Configuration);
+builder.Services.AddForeverToolsScraperApi(builder.Configuration);
 ```
 
 ## Features
