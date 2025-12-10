@@ -178,6 +178,15 @@ if (!solutionWorked)
 - [CapSolver](https://capsolver.com) - Fast, modern API
 - [Anti-Captcha](https://anti-captcha.com) - Enterprise-grade
 
+## Other ForeverTools Packages
+
+| Package | Description | NuGet |
+|---------|-------------|-------|
+| **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
+| **ForeverTools.APILayer** | IP geolocation, currency exchange, phone & email validation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.APILayer.svg)](https://www.nuget.org/packages/ForeverTools.APILayer) |
+| **ForeverTools.Postmark** | Transactional email sending with templates and tracking | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Postmark.svg)](https://www.nuget.org/packages/ForeverTools.Postmark) |
+| **ForeverTools.ScraperAPI** | Web scraping with proxy rotation and CAPTCHA bypass | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ScraperAPI.svg)](https://www.nuget.org/packages/ForeverTools.ScraperAPI) |
+
 ## Requirements
 
 - .NET 8.0, .NET 6.0, or .NET Standard 2.0 compatible framework

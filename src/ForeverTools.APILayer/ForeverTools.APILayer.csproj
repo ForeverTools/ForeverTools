@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net6.0;netstandard2.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+
+    <!-- Package Info -->
+    <PackageId>ForeverTools.APILayer</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>ForeverTools</Authors>
+    <Company>ForeverTools</Company>
+    <Product>ForeverTools.APILayer</Product>
+    <Description>Unified .NET client for APILayer marketplace APIs. Access IP geolocation, currency exchange rates, phone validation, email verification, and more with one API key. Supports IPstack, Currencylayer, Numverify, Mailboxlayer, and 15+ other APIs. Simple async interface with dependency injection support.</Description>
+    <Copyright>Copyright © 2024 ForeverTools</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>apilayer;ip-geolocation;ipstack;currency;exchange-rate;currencylayer;fixer;phone-validation;numverify;email-validation;mailboxlayer;geocoding;weather;api;rest-api;dotnet;csharp;forevertools;validation;geolocation</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <!-- Build -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.5" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

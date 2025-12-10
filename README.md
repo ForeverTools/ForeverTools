@@ -7,6 +7,7 @@
 | Package | Description | NuGet |
 |---------|-------------|-------|
 | **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
+| **ForeverTools.APILayer** | IP geolocation, currency exchange, phone & email validation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.APILayer.svg)](https://www.nuget.org/packages/ForeverTools.APILayer) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
 | **ForeverTools.Postmark** | Transactional email sending with templates and tracking | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Postmark.svg)](https://www.nuget.org/packages/ForeverTools.Postmark) |
 | **ForeverTools.ScraperAPI** | Web scraping with proxy rotation and CAPTCHA bypass | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ScraperAPI.svg)](https://www.nuget.org/packages/ForeverTools.ScraperAPI) |
@@ -23,6 +24,9 @@ All packages are available on NuGet:
 ```bash
 # AI/ML (400+ AI models)
 dotnet add package ForeverTools.AIML
+
+# API utilities (IP geolocation, currency, phone, email validation)
+dotnet add package ForeverTools.APILayer
 
 # Captcha solving (reCAPTCHA, hCaptcha, Turnstile)
 dotnet add package ForeverTools.Captcha
@@ -50,6 +54,29 @@ var imageUrl = await client.GenerateImageAsync("A sunset over mountains");
 
 // Get embeddings for RAG/search
 var vector = await client.EmbedAsync("Hello world");
+```
+
+### APILayer (IP, Currency, Phone, Email)
+```csharp
+using ForeverTools.APILayer;
+
+var client = new ApiLayerClient("your-api-key");
+
+// IP Geolocation
+var geo = await client.GetIpGeolocationAsync("8.8.8.8");
+Console.WriteLine($"Country: {geo.Data.CountryName}, City: {geo.Data.City}");
+
+// Currency conversion
+var convert = await client.ConvertCurrencyAsync("USD", "EUR", 100);
+Console.WriteLine($"100 USD = {convert.Data.Result} EUR");
+
+// Phone validation
+var phone = await client.ValidatePhoneAsync("+14155552671");
+Console.WriteLine($"Valid: {phone.Data.Valid}, Carrier: {phone.Data.Carrier}");
+
+// Email validation
+var email = await client.ValidateEmailAsync("test@example.com");
+Console.WriteLine($"Deliverable: {email.Data.IsDeliverable}");
 ```
 
 ### Captcha Solving
@@ -119,6 +146,7 @@ var screenshot = await client.TakeScreenshotBytesAsync("https://example.com");
 ```csharp
 // Program.cs
 builder.Services.AddForeverToolsAiml("your-api-key");
+builder.Services.AddForeverToolsApiLayer("your-api-key");
 builder.Services.AddForeverToolsCaptcha(options =>
 {
     options.TwoCaptchaApiKey = "your-2captcha-key";
@@ -129,6 +157,7 @@ builder.Services.AddForeverToolsScraperApi("your-api-key");
 
 // Or from configuration
 builder.Services.AddForeverToolsAiml(builder.Configuration);
+builder.Services.AddForeverToolsApiLayer(builder.Configuration);
 builder.Services.AddForeverToolsCaptcha(builder.Configuration);
 builder.Services.AddForeverToolsPostmark(builder.Configuration);
 builder.Services.AddForeverToolsScraperApi(builder.Configuration);

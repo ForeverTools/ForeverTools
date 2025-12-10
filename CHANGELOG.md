@@ -5,14 +5,96 @@ All notable changes to ForeverTools packages will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+---
 
-### Added
-- Initial release of ForeverTools.AIML
+## ForeverTools.ScraperAPI
+
+### [1.0.0] - 2025-12-09
+
+#### Added
+- `ScraperApiClient` - Main client for web scraping via ScraperAPI
+- Simple scraping with `ScrapeAsync`
+- JavaScript rendering with `ScrapeWithJavaScriptAsync`
+- Geo-targeting with `ScrapeFromCountryAsync`
+- Full request configuration via `ScrapeWithResponseAsync`
+- Screenshot capture with `TakeScreenshotAsync` and `TakeScreenshotBytesAsync`
+- Async job support: `SubmitAsyncJobAsync`, `GetAsyncJobStatusAsync`, `ScrapeAsyncAndWaitAsync`
+- Account info with `GetAccountInfoAsync`
+- ASP.NET Core dependency injection via `AddForeverToolsScraperApi()`
+- Configuration binding from `appsettings.json`
+- Request options: Premium proxies, Ultra-premium, Session stickiness, Auto-parse
+- `DeviceTypes` constants: Desktop, Mobile
+- `OutputFormats` constants: Html, Markdown, Text, Json, Csv
+- Multi-target support: .NET 8.0, .NET 6.0, .NET Standard 2.0
+- 32 unit tests
+- Affiliate tracking: `fp_ref=chris88` (50% recurring commission)
+
+---
+
+## ForeverTools.Postmark
+
+### [1.0.0] - 2025-12-09
+
+#### Added
+- `PostmarkClient` - Main client for Postmark transactional email API
+- Single email sending with `SendEmailAsync`
+- Batch sending (up to 500) with `SendBatchAsync`
+- Template emails with `SendTemplateEmailAsync` and `SendTemplateBatchAsync`
+- Delivery statistics with `GetDeliveryStatsAsync`
+- Outbound stats with `GetOutboundStatsAsync`
+- Bounce management: `GetBouncesAsync`, `ActivateBounceAsync`
+- Server info with `GetServerAsync`
+- ASP.NET Core dependency injection via `AddForeverToolsPostmark()`
+- Configuration binding from `appsettings.json`
+- `PostmarkEmail` model with full options (attachments, headers, metadata, tracking)
+- `PostmarkTemplateEmail` for template-based sending
+- `PostmarkAttachment.FromBytes()` with automatic MIME type detection
+- `LinkTrackingOptions` constants: None, HtmlAndText, HtmlOnly, TextOnly
+- `MessageStreams` constants: Outbound, Broadcast
+- Multi-target support: .NET 8.0, .NET 6.0, .NET Standard 2.0
+- 54 unit tests
+- Affiliate tracking: `via=8ac781` (20% commission for 12 months)
+
+---
+
+## ForeverTools.Captcha
+
+### [1.0.1] - 2025-12-08
+
+#### Changed
+- SEO optimization: Added 20 NuGet tags for better discoverability
+- Enhanced package description with target keywords
+
+### [1.0.0] - 2025-12-08
+
+#### Added
+- `CaptchaClient` - Unified client for multiple captcha solving providers
+- Factory methods: `For2Captcha()`, `ForCapSolver()`, `ForAntiCaptcha()`
+- reCAPTCHA v2 solving with `SolveReCaptchaV2Async`
+- reCAPTCHA v3 solving with `SolveReCaptchaV3Async`
+- hCaptcha solving with `SolveHCaptchaAsync`
+- Cloudflare Turnstile solving with `SolveTurnstileAsync`
+- FunCaptcha solving with `SolveFunCaptchaAsync`
+- Image captcha solving with `SolveImageCaptchaAsync`
+- Balance checking with `GetBalanceAsync`
+- ASP.NET Core dependency injection via `AddForeverToolsCaptcha()`
+- Configuration binding from `appsettings.json`
+- `CaptchaProvider` enum for provider selection
+- Multi-target support: .NET 8.0, .NET 6.0, .NET Standard 2.0
+- 44 unit tests
+- Affiliate tracking embedded:
+  - 2Captcha: `soft_id: 2482` (10% commission)
+  - CapSolver: `appId: 0E76F2D8-D6C0-41DD-A3B6-3708694C47B0` (5-20% commission)
 
 ---
 
 ## ForeverTools.AIML
+
+### [1.0.1] - 2025-12-08
+
+#### Changed
+- SEO optimization: Added 20 NuGet tags for better discoverability
+- Enhanced package description with target keywords
 
 ### [1.0.0] - 2025-12-08
 
@@ -35,6 +117,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Multi-target support: .NET 8.0, .NET 6.0, .NET Standard 2.0
 - Full XML documentation for IntelliSense
 - Static factory methods: `FromEnvironment()`, `CreateChatClient()`, `CreateEmbeddingClient()`, `CreateImageClient()`
+- 21 unit tests
+- Affiliate tracking: `via=forevertools` (30% recurring commission)
 
 #### Technical Details
 - Built on OpenAI SDK v2.1.0 for maximum compatibility
@@ -47,17 +131,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Future Packages (Planned)
 
-### ForeverTools.Captcha
-Multi-provider captcha solving (Anti-Captcha, 2Captcha, CapSolver)
+### ForeverTools.APILayer
+23+ API wrappers (GeoIP, Currency, Phone validation, Email verification, etc.)
 
-### ForeverTools.Proxy
-Proxy service abstraction (ScraperAPI, BrightData, SmartProxy)
+### ForeverTools.BrightData
+Proxy service (residential, datacenter, web unlocker)
 
-### ForeverTools.SMS
-SMS API wrapper (BulkGate, Textmagic)
+### ForeverTools.BulkGate
+SMS API (sending, bulk campaigns, delivery reports)
 
-### ForeverTools.Email
-Email validation and sending (Postmark, Mailgun)
+---
 
-[Unreleased]: https://github.com/ForeverTools/ForeverTools.AIML/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/ForeverTools/ForeverTools.AIML/releases/tag/v1.0.0
+[1.0.1]: https://github.com/ForeverTools/ForeverTools/releases/tag/v1.0.1
+[1.0.0]: https://github.com/ForeverTools/ForeverTools/releases/tag/v1.0.0
