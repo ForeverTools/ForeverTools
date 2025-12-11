@@ -9,6 +9,7 @@
 | **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.APILayer** | IP geolocation, currency exchange, phone & email validation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.APILayer.svg)](https://www.nuget.org/packages/ForeverTools.APILayer) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
+| **ForeverTools.OCR** | AI-powered OCR using GPT-4 Vision, Claude 3, and Gemini | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.OCR.svg)](https://www.nuget.org/packages/ForeverTools.OCR) |
 | **ForeverTools.Postmark** | Transactional email sending with templates and tracking | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Postmark.svg)](https://www.nuget.org/packages/ForeverTools.Postmark) |
 | **ForeverTools.ScraperAPI** | Web scraping with proxy rotation and CAPTCHA bypass | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ScraperAPI.svg)](https://www.nuget.org/packages/ForeverTools.ScraperAPI) |
 
@@ -30,6 +31,9 @@ dotnet add package ForeverTools.APILayer
 
 # Captcha solving (reCAPTCHA, hCaptcha, Turnstile)
 dotnet add package ForeverTools.Captcha
+
+# OCR (AI-powered text extraction)
+dotnet add package ForeverTools.OCR
 
 # Transactional email (Postmark)
 dotnet add package ForeverTools.Postmark
@@ -102,6 +106,29 @@ if (result.Success)
 // Also supports: reCAPTCHA v3, hCaptcha, Turnstile, FunCaptcha, Image
 ```
 
+### OCR (AI-Powered Text Extraction)
+```csharp
+using ForeverTools.OCR;
+
+var client = new OcrClient("your-aiml-api-key");
+
+// Extract text from an image file
+var result = await client.ExtractTextFromFileAsync("document.jpg");
+Console.WriteLine(result.Text);
+
+// Extract structured data (JSON output)
+var structured = await client.ExtractStructuredAsync(imageBytes, "image/png");
+
+// Extract tables from images
+var tables = await client.ExtractTablesAsync(imageBytes, "image/png");
+foreach (var table in tables.Tables)
+{
+    Console.WriteLine(table.ToCsv());
+}
+
+// Also supports: form fields, receipts, URLs, custom prompts
+```
+
 ### Postmark Email
 ```csharp
 using ForeverTools.Postmark;
@@ -152,6 +179,7 @@ builder.Services.AddForeverToolsCaptcha(options =>
     options.TwoCaptchaApiKey = "your-2captcha-key";
     options.DefaultProvider = CaptchaProvider.TwoCaptcha;
 });
+builder.Services.AddForeverToolsOcr("your-aiml-api-key");
 builder.Services.AddForeverToolsPostmark("your-server-token");
 builder.Services.AddForeverToolsScraperApi("your-api-key");
 
@@ -159,6 +187,7 @@ builder.Services.AddForeverToolsScraperApi("your-api-key");
 builder.Services.AddForeverToolsAiml(builder.Configuration);
 builder.Services.AddForeverToolsApiLayer(builder.Configuration);
 builder.Services.AddForeverToolsCaptcha(builder.Configuration);
+builder.Services.AddForeverToolsOcr(builder.Configuration);
 builder.Services.AddForeverToolsPostmark(builder.Configuration);
 builder.Services.AddForeverToolsScraperApi(builder.Configuration);
 ```
