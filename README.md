@@ -12,11 +12,23 @@
 | **ForeverTools.OCR** | AI-powered OCR using GPT-4 Vision, Claude 3, and Gemini | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.OCR.svg)](https://www.nuget.org/packages/ForeverTools.OCR) |
 | **ForeverTools.Postmark** | Transactional email sending with templates and tracking | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Postmark.svg)](https://www.nuget.org/packages/ForeverTools.Postmark) |
 | **ForeverTools.ScraperAPI** | Web scraping with proxy rotation and CAPTCHA bypass | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ScraperAPI.svg)](https://www.nuget.org/packages/ForeverTools.ScraperAPI) |
+| **ForeverTools.ImageGen** | AI image generation with social media presets (DALL-E, Flux, SD) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ImageGen.svg)](https://www.nuget.org/packages/ForeverTools.ImageGen) |
 
 ## Coming Soon
 
-- **ForeverTools.Proxy** - Proxy rotation (BrightData, SmartProxy)
+- **ForeverTools.Proxy** - Premium proxy rotation with [BrightData](https://get.brightdata.com/ForeverToolsResidentialProxies) (Residential, ISP, Mobile proxies)
 - **ForeverTools.SMS** - SMS & messaging (BulkGate, Textmagic)
+
+## Premium Proxy Providers
+
+Need high-quality proxies for scraping or automation? Check out [BrightData](https://get.brightdata.com/ForeverToolsResidentialProxies) - the industry leader:
+
+| Proxy Type | Best For | Link |
+|------------|----------|------|
+| **Residential Proxies** | General scraping, geo-targeting | [Get Started](https://get.brightdata.com/ForeverToolsResidentialProxies) |
+| **ISP Proxies** | High-speed, stable connections | [Get Started](https://get.brightdata.com/ForeverToolsISP) |
+| **Social Media Proxies** | Instagram, Facebook, TikTok automation | [Get Started](https://get.brightdata.com/ForeverToolsSocialProxies) |
+| **SERP API** | Search engine scraping | [Get Started](https://get.brightdata.com/ForeverToolsSerp) |
 
 ## Installation
 
@@ -40,6 +52,9 @@ dotnet add package ForeverTools.Postmark
 
 # Web scraping (ScraperAPI)
 dotnet add package ForeverTools.ScraperAPI
+
+# AI Image generation (DALL-E, Stable Diffusion, Flux)
+dotnet add package ForeverTools.ImageGen
 ```
 
 ## Quick Examples
@@ -169,6 +184,24 @@ var screenshot = await client.TakeScreenshotBytesAsync("https://example.com");
 // Also supports: geo-targeting, premium proxies, async jobs, auto-parsing
 ```
 
+### AI Image Generation
+```csharp
+using ForeverTools.ImageGen;
+
+var client = new ImageGenClient("your-aiml-api-key");
+
+// Generate an image
+var image = await client.GenerateAsync("A sunset over mountains");
+await client.SaveAsync(image, "sunset.png");
+
+// Social media presets - perfectly sized for each platform
+var instagram = await client.GenerateForInstagramAsync("Coffee shop aesthetic");
+var youtube = await client.GenerateForYouTubeAsync("SHOCKING Discovery!", ImageStyle.Cinematic);
+var linkedin = await client.GenerateForLinkedInAsync("Professional headshot", ImageStyle.Corporate);
+
+// Also supports: Twitter, Facebook, Pinterest, TikTok, Blog headers, Open Graph
+```
+
 ### ASP.NET Core
 ```csharp
 // Program.cs
@@ -182,6 +215,7 @@ builder.Services.AddForeverToolsCaptcha(options =>
 builder.Services.AddForeverToolsOcr("your-aiml-api-key");
 builder.Services.AddForeverToolsPostmark("your-server-token");
 builder.Services.AddForeverToolsScraperApi("your-api-key");
+builder.Services.AddForeverToolsImageGen("your-aiml-api-key");
 
 // Or from configuration
 builder.Services.AddForeverToolsAiml(builder.Configuration);
@@ -190,6 +224,7 @@ builder.Services.AddForeverToolsCaptcha(builder.Configuration);
 builder.Services.AddForeverToolsOcr(builder.Configuration);
 builder.Services.AddForeverToolsPostmark(builder.Configuration);
 builder.Services.AddForeverToolsScraperApi(builder.Configuration);
+builder.Services.AddForeverToolsImageGen(builder.Configuration);
 ```
 
 ## Features

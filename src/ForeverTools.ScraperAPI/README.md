@@ -197,6 +197,17 @@ Common codes: `us`, `uk`, `de`, `fr`, `es`, `it`, `br`, `ca`, `au`, `jp`, `in`
 - **99.9% uptime** - Reliable infrastructure
 - **Simple pricing** - Pay per successful request
 
+## Need Just Proxies?
+
+If you need standalone proxy access without the scraping features, check out [BrightData](https://get.brightdata.com/ForeverToolsResidentialProxies) - the industry leader in proxy services:
+
+| Proxy Type | Best For | Link |
+|------------|----------|------|
+| **Residential Proxies** | General scraping, geo-targeting | [Get Started](https://get.brightdata.com/ForeverToolsResidentialProxies) |
+| **ISP Proxies** | High-speed, stable connections | [Get Started](https://get.brightdata.com/ForeverToolsISP) |
+| **Social Media Proxies** | Instagram, Facebook, TikTok automation | [Get Started](https://get.brightdata.com/ForeverToolsSocialProxies) |
+| **SERP API** | Search engine scraping | [Get Started](https://get.brightdata.com/ForeverToolsSerp) |
+
 ## Other ForeverTools Packages
 
 | Package | Description | NuGet |
@@ -204,6 +215,7 @@ Common codes: `us`, `uk`, `de`, `fr`, `es`, `it`, `br`, `ca`, `au`, `jp`, `in`
 | **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.APILayer** | IP geolocation, currency exchange, phone & email validation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.APILayer.svg)](https://www.nuget.org/packages/ForeverTools.APILayer) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
+| **ForeverTools.ImageGen** | AI image generation with social media presets (DALL-E, Flux, SD) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ImageGen.svg)](https://www.nuget.org/packages/ForeverTools.ImageGen) |
 | **ForeverTools.OCR** | AI-powered OCR using GPT-4 Vision, Claude 3, and Gemini | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.OCR.svg)](https://www.nuget.org/packages/ForeverTools.OCR) |
 | **ForeverTools.Postmark** | Transactional email sending with templates and tracking | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Postmark.svg)](https://www.nuget.org/packages/ForeverTools.Postmark) |
 
