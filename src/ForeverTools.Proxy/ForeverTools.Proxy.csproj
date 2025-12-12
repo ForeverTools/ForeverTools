@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net6.0;netstandard2.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+
+    <!-- Package Info -->
+    <PackageId>ForeverTools.Proxy</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>ForeverTools</Authors>
+    <Company>ForeverTools</Company>
+    <Product>ForeverTools.Proxy</Product>
+    <Description>Premium proxy client for .NET with BrightData integration. Access residential, datacenter, ISP, and mobile proxies with geo-targeting, session management, and automatic rotation. Perfect for web scraping, data collection, ad verification, and social media automation.</Description>
+    <PackageTags>proxy;brightdata;luminati;residential-proxy;datacenter-proxy;isp-proxy;mobile-proxy;web-scraping;geo-targeting;proxy-rotation;socks5;http-proxy;scraping;automation;ip-rotation;anonymous;dotnet;csharp</PackageTags>
+    <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <Copyright>Copyright (c) ForeverTools 2024</Copyright>
+
+    <!-- Build Config -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\assets\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
