@@ -349,8 +349,10 @@ catch (TaskCanceledException)
 
 ## Related Packages
 
+- [ForeverTools.AIML](https://www.nuget.org/packages/ForeverTools.AIML/) - Access 400+ AI models
 - [ForeverTools.ImageGen](https://www.nuget.org/packages/ForeverTools.ImageGen/) - AI image generation with multiple providers
-- [ForeverTools.Converters.DocumentToMarkdown](https://www.nuget.org/packages/ForeverTools.Converters.DocumentToMarkdown/) - Document to Markdown conversion
+- [ForeverTools.Translate](https://www.nuget.org/packages/ForeverTools.Translate/) - AI-powered translation with 100+ languages
+- [ForeverTools.ScraperAPI](https://www.nuget.org/packages/ForeverTools.ScraperAPI/) - Web scraping with proxy rotation
 
 ## Support
 

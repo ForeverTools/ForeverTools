@@ -151,17 +151,17 @@ public class BrightDataClient : IDisposable
 
         if (!string.IsNullOrEmpty(geo.Country))
         {
-            parts.Add($"country-{geo.Country.ToLowerInvariant()}");
+            parts.Add($"country-{geo.Country!.ToLowerInvariant()}");
         }
 
         if (!string.IsNullOrEmpty(geo.State))
         {
-            parts.Add($"state-{geo.State.ToLowerInvariant()}");
+            parts.Add($"state-{geo.State!.ToLowerInvariant()}");
         }
 
         if (!string.IsNullOrEmpty(geo.City))
         {
-            parts.Add($"city-{geo.City.ToLowerInvariant().Replace(" ", "_")}");
+            parts.Add($"city-{geo.City!.ToLowerInvariant().Replace(" ", "_")}");
         }
 
         if (!string.IsNullOrEmpty(sessionId))

@@ -7,6 +7,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## ForeverTools.Translate
+
+### [1.0.0] - 2025-12-13
+
+#### Added
+- `TranslationClient` - AI-powered translation using GPT-4, Claude, Llama and 400+ models
+- Simple translation with `TranslateAsync` (auto-detect source language)
+- Translate to English with `TranslateToEnglishAsync`
+- Translate from English with `TranslateFromEnglishAsync`
+- Detailed results with `TranslateWithDetailsAsync`
+- Language detection with `DetectLanguageAsync`
+- Batch translation with `TranslateBatchAsync`
+- Multi-language translation with `TranslateToMultipleLanguagesAsync`
+- Style-based translation with `TranslateWithStyleAsync` (Natural, Formal, Casual, Technical, Literal, Creative)
+- Context-aware translation with `TranslateWithContextAsync`
+- Custom glossaries with `TranslateWithGlossaryAsync`
+- 50+ predefined languages via `Languages` class
+- `TranslationModels` constants: GPT-4o, GPT-4o-mini, Claude 3.5 Sonnet, Gemini 1.5 Pro, Llama 3.1, Qwen
+- ASP.NET Core dependency injection via `AddForeverToolsTranslation()`
+- Configuration binding from `appsettings.json`
+- Multi-target support: .NET 8.0, .NET 6.0, .NET Standard 2.0
+- 38 unit tests
+- Affiliate tracking: `via=forevertools` (30% recurring commission)
+
+---
+
+## ForeverTools.Proxy
+
+### [1.0.0] - 2025-12-12
+
+#### Added
+- `BrightDataClient` - Premium proxy rotation with BrightData
+- Create HTTP clients with `CreateHttpClient()`
+- Geo-targeting with `CreateHttpClientForCountry()`
+- Session management with `CreateSession()` for sticky IPs
+- City and state targeting with `CreateHttpClientForCity()` and `CreateHttpClientForState()`
+- ASN targeting with `CreateHttpClientForAsn()`
+- Multiple proxy types: Residential, Datacenter, ISP, Mobile
+- `ProxyTypes` constants for all supported proxy types
+- `BrightDataSession` for maintaining same IP across requests
+- ASP.NET Core dependency injection via `AddForeverToolsProxy()`
+- Configuration binding from `appsettings.json`
+- Multi-target support: .NET 8.0, .NET 6.0, .NET Standard 2.0
+- 48 unit tests
+- Affiliate tracking: BrightData partner links (50% + 15% recurring commission)
+
+---
+
 ## ForeverTools.ScraperAPI
 
 ### [1.0.0] - 2025-12-09

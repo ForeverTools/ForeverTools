@@ -9,14 +9,15 @@
 | **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.APILayer** | IP geolocation, currency exchange, phone & email validation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.APILayer.svg)](https://www.nuget.org/packages/ForeverTools.APILayer) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
+| **ForeverTools.ImageGen** | AI image generation with social media presets (DALL-E, Flux, SD) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ImageGen.svg)](https://www.nuget.org/packages/ForeverTools.ImageGen) |
 | **ForeverTools.OCR** | AI-powered OCR using GPT-4 Vision, Claude 3, and Gemini | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.OCR.svg)](https://www.nuget.org/packages/ForeverTools.OCR) |
 | **ForeverTools.Postmark** | Transactional email sending with templates and tracking | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Postmark.svg)](https://www.nuget.org/packages/ForeverTools.Postmark) |
+| **ForeverTools.Proxy** | Premium proxy rotation with BrightData (Residential, ISP, Mobile) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Proxy.svg)](https://www.nuget.org/packages/ForeverTools.Proxy) |
 | **ForeverTools.ScraperAPI** | Web scraping with proxy rotation and CAPTCHA bypass | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ScraperAPI.svg)](https://www.nuget.org/packages/ForeverTools.ScraperAPI) |
-| **ForeverTools.ImageGen** | AI image generation with social media presets (DALL-E, Flux, SD) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ImageGen.svg)](https://www.nuget.org/packages/ForeverTools.ImageGen) |
+| **ForeverTools.Translate** | AI-powered translation with 100+ languages (GPT-4, Claude) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Translate.svg)](https://www.nuget.org/packages/ForeverTools.Translate) |
 
 ## Coming Soon
 
-- **ForeverTools.Proxy** - Premium proxy rotation with [BrightData](https://get.brightdata.com/ForeverToolsResidentialProxies) (Residential, ISP, Mobile proxies)
 - **ForeverTools.SMS** - SMS & messaging (BulkGate, Textmagic)
 
 ## Premium Proxy Providers
@@ -55,6 +56,12 @@ dotnet add package ForeverTools.ScraperAPI
 
 # AI Image generation (DALL-E, Stable Diffusion, Flux)
 dotnet add package ForeverTools.ImageGen
+
+# Premium proxy rotation (BrightData)
+dotnet add package ForeverTools.Proxy
+
+# AI Translation (100+ languages)
+dotnet add package ForeverTools.Translate
 ```
 
 ## Quick Examples
@@ -202,6 +209,52 @@ var linkedin = await client.GenerateForLinkedInAsync("Professional headshot", Im
 // Also supports: Twitter, Facebook, Pinterest, TikTok, Blog headers, Open Graph
 ```
 
+### Premium Proxies (BrightData)
+```csharp
+using ForeverTools.Proxy;
+
+var client = new BrightDataClient("customer-id", "zone", "password");
+
+// Create an HttpClient with proxy
+using var httpClient = client.CreateHttpClient();
+var html = await httpClient.GetStringAsync("https://example.com");
+
+// Geo-targeting - browse from specific countries
+using var usClient = client.CreateHttpClientForCountry("us");
+using var ukClient = client.CreateHttpClientForCountry("gb");
+
+// Sticky sessions - same IP across requests
+using var session = client.CreateSession();
+using var sessionClient = session.CreateHttpClient();
+
+// Also supports: Residential, Datacenter, ISP, Mobile proxies
+```
+
+### AI Translation
+```csharp
+using ForeverTools.Translate;
+
+var client = new TranslationClient("your-aiml-api-key");
+
+// Translate to Spanish (auto-detect source)
+var spanish = await client.TranslateAsync("Hello, how are you?", "es");
+// "Hola, ¿cómo estás?"
+
+// Translate to English
+var english = await client.TranslateToEnglishAsync("Bonjour le monde");
+// "Hello world"
+
+// Detect language
+var detected = await client.DetectLanguageAsync("Guten Tag");
+Console.WriteLine($"Language: {detected.LanguageName}"); // German
+
+// Batch translation
+var texts = new[] { "Hello", "Goodbye", "Thank you" };
+var results = await client.TranslateBatchAsync(texts, "es");
+
+// Also supports: custom glossaries, translation styles, context-aware translation
+```
+
 ### ASP.NET Core
 ```csharp
 // Program.cs
@@ -216,6 +269,8 @@ builder.Services.AddForeverToolsOcr("your-aiml-api-key");
 builder.Services.AddForeverToolsPostmark("your-server-token");
 builder.Services.AddForeverToolsScraperApi("your-api-key");
 builder.Services.AddForeverToolsImageGen("your-aiml-api-key");
+builder.Services.AddForeverToolsProxy("customer-id", "zone", "password");
+builder.Services.AddForeverToolsTranslation("your-aiml-api-key");
 
 // Or from configuration
 builder.Services.AddForeverToolsAiml(builder.Configuration);
@@ -225,6 +280,8 @@ builder.Services.AddForeverToolsOcr(builder.Configuration);
 builder.Services.AddForeverToolsPostmark(builder.Configuration);
 builder.Services.AddForeverToolsScraperApi(builder.Configuration);
 builder.Services.AddForeverToolsImageGen(builder.Configuration);
+builder.Services.AddForeverToolsProxy(builder.Configuration);
+builder.Services.AddForeverToolsTranslation(builder.Configuration);
 ```
 
 ## Features
