@@ -206,7 +206,7 @@ var client = ApiLayerClient.FromEnvironment("MY_API_KEY");
 
 | Package | Description | NuGet |
 |---------|-------------|-------|
-| **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
+| **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.Apify** | Web scraping platform with 1,600+ actors (Amazon, Google, Instagram, Twitter) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Apify.svg)](https://www.nuget.org/packages/ForeverTools.Apify) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
 | **ForeverTools.ImageGen** | AI image generation with social media presets (DALL-E, Flux, SD) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ImageGen.svg)](https://www.nuget.org/packages/ForeverTools.ImageGen) |
@@ -217,6 +217,12 @@ var client = ApiLayerClient.FromEnvironment("MY_API_KEY");
 | **ForeverTools.STT** | Speech-to-Text using Whisper (transcription, subtitles, language detection) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.STT.svg)](https://www.nuget.org/packages/ForeverTools.STT) |
 | **ForeverTools.Summarize** | AI-powered text summarization (TL;DR, bullet points, executive summaries) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Summarize.svg)](https://www.nuget.org/packages/ForeverTools.Summarize) |
 | **ForeverTools.Translate** | AI-powered translation with 100+ languages (GPT-4, Claude) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Translate.svg)](https://www.nuget.org/packages/ForeverTools.Translate) |
+| **ForeverTools.CodeGen** | AI-powered code generation, refactoring, and explanation | *Coming soon* |
+| **ForeverTools.ContentMod** | AI content moderation — detect toxicity, hate speech, adult content | *Coming soon* |
+| **ForeverTools.EmailAI** | AI email composition, reply drafting, summarization, and classification | *Coming soon* |
+| **ForeverTools.InvoiceParser** | AI-powered invoice and receipt data extraction | *Coming soon* |
+| **ForeverTools.Sentiment** | AI sentiment analysis with emotion detection | *Coming soon* |
+| **ForeverTools.TTS** | Text-to-Speech synthesis with 30+ voices | *Coming soon* |
 
 ## License
 
@@ -224,7 +230,5 @@ MIT License - see LICENSE file for details.
 
 ## Links
 
-- [Get API Key](https://apilayer.com?fpr=chris72)
-- [API Documentation](https://apilayer.com/docs)
-- [GitHub Repository](https://github.com/ForeverTools/ForeverTools)
-- [NuGet Package](https://www.nuget.org/packages/ForeverTools.APILayer)
+- [GitHub Organization](https://github.com/ForeverTools)
+- [NuGet Profile](https://www.nuget.org/profiles/ForeverTools)

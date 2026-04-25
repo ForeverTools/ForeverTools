@@ -182,7 +182,7 @@ if (!solutionWorked)
 
 | Package | Description | NuGet |
 |---------|-------------|-------|
-| **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
+| **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.APILayer** | IP geolocation, currency exchange, phone & email validation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.APILayer.svg)](https://www.nuget.org/packages/ForeverTools.APILayer) |
 | **ForeverTools.Apify** | Web scraping platform with 1,600+ actors (Amazon, Google, Instagram, Twitter) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Apify.svg)](https://www.nuget.org/packages/ForeverTools.Apify) |
 | **ForeverTools.ImageGen** | AI image generation with social media presets (DALL-E, Flux, SD) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ImageGen.svg)](https://www.nuget.org/packages/ForeverTools.ImageGen) |
@@ -193,12 +193,18 @@ if (!solutionWorked)
 | **ForeverTools.STT** | Speech-to-Text using Whisper (transcription, subtitles, language detection) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.STT.svg)](https://www.nuget.org/packages/ForeverTools.STT) |
 | **ForeverTools.Summarize** | AI-powered text summarization (TL;DR, bullet points, executive summaries) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Summarize.svg)](https://www.nuget.org/packages/ForeverTools.Summarize) |
 | **ForeverTools.Translate** | AI-powered translation with 100+ languages (GPT-4, Claude) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Translate.svg)](https://www.nuget.org/packages/ForeverTools.Translate) |
-
-## Requirements
-
-- .NET 8.0, .NET 6.0, or .NET Standard 2.0 compatible framework
-- API key from at least one provider
+| **ForeverTools.CodeGen** | AI-powered code generation, refactoring, and explanation | *Coming soon* |
+| **ForeverTools.ContentMod** | AI content moderation — detect toxicity, hate speech, adult content | *Coming soon* |
+| **ForeverTools.EmailAI** | AI email composition, reply drafting, summarization, and classification | *Coming soon* |
+| **ForeverTools.InvoiceParser** | AI-powered invoice and receipt data extraction | *Coming soon* |
+| **ForeverTools.Sentiment** | AI sentiment analysis with emotion detection | *Coming soon* |
+| **ForeverTools.TTS** | Text-to-Speech synthesis with 30+ voices | *Coming soon* |
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License - see LICENSE file for details.
+
+## Links
+
+- [GitHub Organization](https://github.com/ForeverTools)
+- [NuGet Profile](https://www.nuget.org/profiles/ForeverTools)

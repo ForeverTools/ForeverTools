@@ -21,7 +21,14 @@
 
 ## Coming Soon
 
-- **ForeverTools.SMS** - SMS & messaging (BulkGate, Textmagic)
+| Package | Description |
+|---------|-------------|
+| **ForeverTools.Sentiment** | AI sentiment analysis with emotion detection (Positive/Negative/Neutral + 6 emotions) |
+| **ForeverTools.TTS** | Text-to-Speech synthesis with 30+ voices via AI/ML API |
+| **ForeverTools.InvoiceParser** | AI-powered invoice and receipt data extraction (vendor, totals, line items) |
+| **ForeverTools.ContentMod** | AI content moderation — toxicity, hate speech, adult content detection |
+| **ForeverTools.CodeGen** | AI code generation, refactoring, and explanation |
+| **ForeverTools.EmailAI** | AI email composition, reply drafting, summarization, and classification |
 
 ## Premium Proxy Providers
 

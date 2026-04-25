@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net6.0;netstandard2.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+
+    <!-- NuGet Package Metadata -->
+    <PackageId>ForeverTools.Sentiment</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>ForeverTools</Authors>
+    <Company>ForeverTools</Company>
+    <Description>Sentiment analysis and text emotion scoring for .NET via the AI/ML API. Analyze text sentiment (positive/negative/neutral/mixed) with confidence scores and emotion breakdown in one async call. Powered by AI/ML API — 400+ models available.</Description>
+    <PackageTags>sentiment-analysis;nlp;text-classification;emotion-detection;ai;aiml;dotnet;forevertools</PackageTags>
+    <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <Copyright>Copyright (c) 2025 ForeverTools</Copyright>
+
+    <!-- Enable source link for debugging -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <!-- Conditional compilation for older frameworks -->
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\assets\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
