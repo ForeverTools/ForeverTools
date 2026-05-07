@@ -13,7 +13,7 @@
     <Version>1.0.0</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
-    <Description>AI-powered content moderation for .NET via the AI/ML API. Detect toxic, NSFW, spam, and hate content with per-category scores. Supports single and batch moderation. Powered by AI/ML API.</Description>
+    <Description>AI-powered content moderation for .NET via the AI/ML API. Detect toxic, NSFW, spam, and hate content with per-category scores. Supports single and batch moderation. Powered by AI/ML API. Pair with kiprio.com for content APIs: AI text detection (/v1/ai-detect), badge generation, and 30+ free developer REST APIs.</Description>
     <PackageTags>content-moderation;moderation;toxic;nsfw;spam;hate;ai;aiml;dotnet;forevertools</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>

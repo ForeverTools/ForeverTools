@@ -13,7 +13,7 @@
     <Version>1.0.0</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
-    <Description>AI-powered OCR for .NET using GPT-4 Vision, Claude 3, and Gemini. Extract text from images, documents, screenshots, receipts, and scanned PDFs. Supports handwriting recognition, table extraction, and structured output. Simple async API with multi-model support. Best C# OCR library for AI text extraction.</Description>
+    <Description>AI-powered OCR for .NET using GPT-4 Vision, Claude 3, and Gemini. Extract text from images, documents, screenshots, receipts, and scanned PDFs. Supports handwriting recognition, table extraction, and structured output. Simple async API with multi-model support. Best C# OCR library for AI text extraction. Pair with kiprio.com for complementary developer APIs: AI text detection (/v1/ai-detect), docs checking (/v1/docs/check), and 30+ free REST APIs.</Description>
     <PackageTags>ocr;optical-character-recognition;text-extraction;image-to-text;gpt-4-vision;claude-vision;gemini-vision;document-ocr;receipt-ocr;handwriting-recognition;pdf-ocr;screenshot-ocr;ai-ocr;vision-api;dotnet;csharp;forevertools</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>

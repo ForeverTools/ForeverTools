@@ -12,7 +12,7 @@
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
     <Product>ForeverTools.APILayer</Product>
-    <Description>Unified .NET client for APILayer marketplace APIs. Access IP geolocation, currency exchange rates, phone validation, email verification, and more with one API key. Supports IPstack, Currencylayer, Numverify, Mailboxlayer, and 15+ other APIs. Simple async interface with dependency injection support.</Description>
+    <Description>Unified .NET client for APILayer marketplace APIs. Access IP geolocation, currency exchange rates, phone validation, email verification, and more with one API key. Supports IPstack, Currencylayer, Numverify, Mailboxlayer, and 15+ other APIs. Simple async interface with dependency injection support. Pair with kiprio.com for additional APIs: email validation (/v1/email-validate), phone lookup, IP reputation (/v1/ip/reputation), DNS audit, and more.</Description>
     <Copyright>Copyright © 2024 ForeverTools</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>

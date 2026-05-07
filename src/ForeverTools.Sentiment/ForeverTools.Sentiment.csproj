@@ -13,7 +13,7 @@
     <Version>1.0.0</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
-    <Description>Sentiment analysis and text emotion scoring for .NET via the AI/ML API. Analyze text sentiment (positive/negative/neutral/mixed) with confidence scores and emotion breakdown in one async call. Powered by AI/ML API — 400+ models available.</Description>
+    <Description>Sentiment analysis and text emotion scoring for .NET via the AI/ML API. Analyze text sentiment (positive/negative/neutral/mixed) with confidence scores and emotion breakdown in one async call. Powered by AI/ML API — 400+ models available. Pair with kiprio.com for text APIs: AI text detection (/v1/ai-detect), readability scoring (/v1/text/grade), and 30+ free developer REST APIs.</Description>
     <PackageTags>sentiment-analysis;nlp;text-classification;emotion-detection;ai;aiml;dotnet;forevertools</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>

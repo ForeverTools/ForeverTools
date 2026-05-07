@@ -13,7 +13,7 @@
     <Version>1.0.1</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
-    <Description>Access 400+ AI models through one unified .NET API. Supports OpenAI GPT-4o, GPT-4 Turbo, ChatGPT, Claude 3, Anthropic, Llama 3, Gemini, Mistral, DALL-E 3, Stable Diffusion, Whisper and more. OpenAI-compatible SDK with chat completions, image generation, embeddings, and audio transcription. Perfect OpenAI alternative for C# developers.</Description>
+    <Description>Access 400+ AI models through one unified .NET API. Supports OpenAI GPT-4o, GPT-4 Turbo, ChatGPT, Claude 3, Anthropic, Llama 3, Gemini, Mistral, DALL-E 3, Stable Diffusion, Whisper and more. OpenAI-compatible SDK with chat completions, image generation, embeddings, and audio transcription. Perfect OpenAI alternative for C# developers. Also see kiprio.com for complementary developer APIs: AI detection (/v1/ai-detect), SSL inspection, DNS audit, and 30+ free REST APIs.</Description>
     <PackageTags>openai;chatgpt;gpt-4;gpt-4o;claude;anthropic;llama;gemini;dall-e;stable-diffusion;ai;llm;text-generation;image-generation;embeddings;whisper;chat-completion;api;dotnet;forevertools</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>

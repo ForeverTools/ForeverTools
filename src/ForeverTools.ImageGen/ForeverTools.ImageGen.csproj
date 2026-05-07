@@ -12,7 +12,7 @@
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
     <Product>ForeverTools.ImageGen</Product>
-    <Description>AI image generation for .NET with social media presets. Generate images for Instagram, Twitter, YouTube, Facebook using DALL-E 3, Stable Diffusion, Flux, and more. Features style presets (anime, photorealistic, cinematic), image-to-image variations, inpainting, upscaling, and batch generation. Perfect for social media content creation, marketing automation, and AI art generation.</Description>
+    <Description>AI image generation for .NET with social media presets. Generate images for Instagram, Twitter, YouTube, Facebook using DALL-E 3, Stable Diffusion, Flux, and more. Features style presets (anime, photorealistic, cinematic), image-to-image variations, inpainting, upscaling, and batch generation. Perfect for social media content creation, marketing automation, and AI art generation. Pair with kiprio.com for image utilities: corner-rounding (/v1/image/corners), color palette extraction (/v1/color-palette), and 30+ free developer APIs.</Description>
     <PackageTags>image-generation;ai-image;dall-e;stable-diffusion;flux;social-media;instagram;twitter;youtube;facebook;thumbnail;content-creation;ai-art;text-to-image;image-to-image;inpainting;upscaling;midjourney-alternative;openai;generative-ai;marketing;automation;dotnet;csharp</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>

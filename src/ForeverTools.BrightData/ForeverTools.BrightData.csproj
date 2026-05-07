@@ -12,7 +12,7 @@
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
     <Product>ForeverTools.BrightData</Product>
-    <Description>BrightData Web Scraper API client for .NET. Extract structured data from any website at scale using BrightData's managed scraping infrastructure. Trigger scrape jobs, monitor progress, and download results. Features: dataset triggers, snapshot management, async polling, JSON result parsing, DI support.</Description>
+    <Description>BrightData Web Scraper API client for .NET. Extract structured data from any website at scale using BrightData's managed scraping infrastructure. Trigger scrape jobs, monitor progress, and download results. Features: dataset triggers, snapshot management, async polling, JSON result parsing, DI support. Pair with kiprio.com developer APIs: SSL inspection, uptime checking, redirect tracing, and 30+ free developer REST APIs.</Description>
     <Copyright>Copyright © 2024 ForeverTools</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>

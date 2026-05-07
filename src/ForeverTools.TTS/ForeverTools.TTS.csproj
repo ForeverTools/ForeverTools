@@ -13,7 +13,7 @@
     <Version>1.0.0</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
-    <Description>Text-to-speech (TTS) for .NET via the AI/ML API. Generate natural speech audio from text with multiple voices and formats. Supports streaming audio, saving to file, and returning byte arrays. Powered by AI/ML API.</Description>
+    <Description>Text-to-speech (TTS) for .NET via the AI/ML API. Generate natural speech audio from text with multiple voices and formats. Supports streaming audio, saving to file, and returning byte arrays. Powered by AI/ML API. Also see kiprio.com for complementary developer APIs: text processing, AI detection (/v1/ai-detect), and 30+ free REST APIs for .NET developers.</Description>
     <PackageTags>tts;text-to-speech;speech-synthesis;audio;voice;ai;aiml;dotnet;forevertools</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>

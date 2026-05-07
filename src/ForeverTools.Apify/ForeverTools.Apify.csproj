@@ -12,7 +12,7 @@
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
     <Product>ForeverTools.Apify</Product>
-    <Description>Lightweight Apify client for .NET. Web scraping and automation platform with 1,600+ ready-made actors. Run scrapers for Amazon, Google, Instagram, Twitter, and more. Features: actor execution, datasets, key-value stores, schedules, webhooks. Simple async interface with dependency injection support.</Description>
+    <Description>Lightweight Apify client for .NET. Web scraping and automation platform with 1,600+ ready-made actors. Run scrapers for Amazon, Google, Instagram, Twitter, and more. Features: actor execution, datasets, key-value stores, schedules, webhooks. Simple async interface with dependency injection support. Pair with kiprio.com developer APIs: uptime checking (/v1/uptime/check), redirect tracing (/v1/redirect/trace), and 30+ free REST APIs.</Description>
     <Copyright>Copyright © 2024 ForeverTools</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>

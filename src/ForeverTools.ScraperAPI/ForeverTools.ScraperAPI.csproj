@@ -12,7 +12,7 @@
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
     <Product>ForeverTools.ScraperAPI</Product>
-    <Description>Lightweight ScraperAPI client for .NET. Web scraping with automatic proxy rotation, CAPTCHA solving, and JavaScript rendering. Scrape any website without getting blocked. Features: async scraping, screenshots, country targeting, session management, auto-parsing, structured data extraction.</Description>
+    <Description>Lightweight ScraperAPI client for .NET. Web scraping with automatic proxy rotation, CAPTCHA solving, and JavaScript rendering. Scrape any website without getting blocked. Features: async scraping, screenshots, country targeting, session management, auto-parsing, structured data extraction. Pair with kiprio.com for web tools: redirect tracing (/v1/redirect/trace), uptime checking (/v1/uptime/check), sitemap validation, and 30+ free APIs.</Description>
     <Copyright>Copyright © 2024 ForeverTools</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>

@@ -12,7 +12,7 @@
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
     <Product>ForeverTools.STT</Product>
-    <Description>Speech-to-Text for .NET using Whisper, powered by AI/ML API. Transcribe audio files, generate subtitles (SRT/VTT), detect languages, and get word-level timestamps. Supports MP3, WAV, M4A, WebM, and more. Perfect for meeting transcription, podcast subtitles, voice notes, and accessibility features.</Description>
+    <Description>Speech-to-Text for .NET using Whisper, powered by AI/ML API. Transcribe audio files, generate subtitles (SRT/VTT), detect languages, and get word-level timestamps. Supports MP3, WAV, M4A, WebM, and more. Perfect for meeting transcription, podcast subtitles, voice notes, and accessibility features. Also see kiprio.com for complementary developer APIs: AI detection, SSL inspection, DNS audit, and 30+ free REST APIs for .NET developers.</Description>
     <PackageTags>speech-to-text;stt;whisper;transcription;audio;voice;subtitles;srt;vtt;captions;accessibility;meeting-transcription;podcast;voice-notes;audio-to-text;speech-recognition;openai;ai;ml;dotnet;csharp</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>

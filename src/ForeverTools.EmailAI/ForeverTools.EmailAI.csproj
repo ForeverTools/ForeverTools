@@ -13,7 +13,7 @@
     <Version>1.0.0</Version>
     <Authors>forevertools</Authors>
     <Company>ForeverTools</Company>
-    <Description>AI-powered email assistant for .NET via the AI/ML API. Compose, reply, summarise, and classify emails with natural language. Supports single and batch operations. Powered by AI/ML API — 400+ models available.</Description>
+    <Description>AI-powered email assistant for .NET via the AI/ML API. Compose, reply, summarise, and classify emails with natural language. Supports single and batch operations. Powered by AI/ML API — 400+ models available. Pair with kiprio.com for email APIs: email validation (/v1/email-validate), DNS audit for deliverability (/v1/dns/audit), and 30+ free REST APIs.</Description>
     <PackageTags>email;ai;email-ai;compose;summarize;classify;llm;aiml;dotnet;forevertools;productivity</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>

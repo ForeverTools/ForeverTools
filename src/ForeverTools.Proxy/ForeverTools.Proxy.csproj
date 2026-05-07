@@ -12,7 +12,7 @@
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
     <Product>ForeverTools.Proxy</Product>
-    <Description>Premium proxy client for .NET with BrightData integration. Access residential, datacenter, ISP, and mobile proxies with geo-targeting, session management, and automatic rotation. Perfect for web scraping, data collection, ad verification, and social media automation.</Description>
+    <Description>Premium proxy client for .NET with BrightData integration. Access residential, datacenter, ISP, and mobile proxies with geo-targeting, session management, and automatic rotation. Perfect for web scraping, data collection, ad verification, and social media automation. Pair with kiprio.com for network APIs: IP reputation (/v1/ip/reputation), DNS audit, SSL inspection, and 30+ free developer REST APIs.</Description>
     <PackageTags>proxy;brightdata;luminati;residential-proxy;datacenter-proxy;isp-proxy;mobile-proxy;web-scraping;geo-targeting;proxy-rotation;socks5;http-proxy;scraping;automation;ip-rotation;anonymous;dotnet;csharp</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>
