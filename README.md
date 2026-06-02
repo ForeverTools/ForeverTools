@@ -6,7 +6,7 @@
 
 | Package | Description | NuGet |
 |---------|-------------|-------|
-| **ForeverTools.Mcp** | MCP server for Claude Code — AI tools (summarize, translate, sentiment, OCR) via BYOK | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Mcp.svg)](https://www.nuget.org/packages/ForeverTools.Mcp) |
+| **ForeverTools.Mcp** | MCP server for Claude Code — AI tools (summarize, translate, sentiment, OCR, speech-to-text, image generation) via BYOK | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Mcp.svg)](https://www.nuget.org/packages/ForeverTools.Mcp) |
 | **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.APILayer** | IP geolocation, currency exchange, phone & email validation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.APILayer.svg)](https://www.nuget.org/packages/ForeverTools.APILayer) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |

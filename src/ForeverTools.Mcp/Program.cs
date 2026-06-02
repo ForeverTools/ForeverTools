@@ -16,6 +16,8 @@ builder.Services
     .WithTools<SummarizeTool>()
     .WithTools<TranslateTool>()
     .WithTools<SentimentTool>()
-    .WithTools<OcrTool>();
+    .WithTools<OcrTool>()
+    .WithTools<SttTool>()
+    .WithTools<ImageGenTool>();
 
 await builder.Build().RunAsync();

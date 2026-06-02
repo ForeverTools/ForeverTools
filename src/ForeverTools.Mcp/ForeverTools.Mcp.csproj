@@ -12,7 +12,7 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>forevertools-mcp</ToolCommandName>
     <PackageId>ForeverTools.Mcp</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
     <Description>ForeverTools MCP Server — expose AI services (summarize, translate, sentiment, OCR, speech-to-text, image generation) to Claude Code and any MCP-compatible client. Bring your own AI/ML API key. Install as a .NET tool: dotnet tool install -g ForeverTools.Mcp</Description>
