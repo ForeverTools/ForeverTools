@@ -12,11 +12,11 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>forevertools-mcp</ToolCommandName>
     <PackageId>ForeverTools.Mcp</PackageId>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <Authors>ForeverTools</Authors>
     <Company>ForeverTools</Company>
-    <Description>ForeverTools MCP Server — expose AI services (summarize, translate, sentiment, OCR, speech-to-text, image generation, web fetch, keyword extraction) to Claude Code and any MCP-compatible client. Bring your own AI/ML API key. Install as a .NET tool: dotnet tool install -g ForeverTools.Mcp</Description>
-    <PackageTags>mcp;model-context-protocol;claude-code;ai;summarize;translate;sentiment;ocr;claude;llm;dotnet;forevertools;web-scraping;keywords</PackageTags>
+    <Description>ForeverTools MCP Server — expose AI services (summarize, translate, sentiment, OCR, speech-to-text, image generation, web fetch, keyword extraction, Markdown→HTML, JSON formatting) to Claude Code and any MCP-compatible client. Bring your own AI/ML API key. Install as a .NET tool: dotnet tool install -g ForeverTools.Mcp</Description>
+    <PackageTags>mcp;model-context-protocol;claude-code;ai;summarize;translate;sentiment;ocr;claude;llm;dotnet;forevertools;web-scraping;keywords;markdown;json</PackageTags>
     <PackageProjectUrl>https://github.com/ForeverTools/ForeverTools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ForeverTools/ForeverTools</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -31,6 +31,7 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.1" />
+    <PackageReference Include="Markdig" Version="0.40.0" />
   </ItemGroup>
 
   <ItemGroup>

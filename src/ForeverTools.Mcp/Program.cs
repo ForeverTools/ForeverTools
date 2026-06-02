@@ -19,6 +19,8 @@ builder.Services
     .WithTools<OcrTool>()
     .WithTools<SttTool>()
     .WithTools<ImageGenTool>()
-    .WithTools<WebTool>();
+    .WithTools<WebTool>()
+    .WithTools<MarkdownTool>()
+    .WithTools<JsonTool>();
 
 await builder.Build().RunAsync();

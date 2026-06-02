@@ -2,6 +2,30 @@
 
 .NET wrapper libraries for popular third-party APIs. Clean interfaces, dependency injection ready, available on NuGet.
 
+## ForeverTools MCP Server — Claude Code Integration
+
+**Use AI directly inside Claude Code** — summarize, translate, OCR, TTS, sentiment analysis, image generation, web fetch and more, without leaving your editor.
+
+```bash
+# Install the MCP server
+dotnet tool install -g ForeverTools.Mcp
+
+# Add to Claude Code
+claude mcp add forevertools -- forevertools-mcp
+```
+
+**What it does:** Adds 13 AI tools to Claude Code (and any MCP-compatible client). Bring your own free [AI/ML API key](https://aimlapi.com) — no subscription required.
+
+```
+Tools: summarize • translate • sentiment • ocr • speech_to_text • text_to_speech
+       image_generate • web_fetch • keyword_extract • markdown_to_html
+       json_format • code_explain • paraphrase
+```
+
+> Free API key: [aimlapi.com](https://aimlapi.com) gives free access to 200+ models including GPT-4, Claude, Llama, Gemini.
+
+---
+
 ## Packages
 
 | Package | Description | NuGet |
