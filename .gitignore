@@ -52,4 +52,5 @@ appsettings.*.json
 *.private.md
 *.local.md
 docs/
-tools/
+/tools/
+!src/

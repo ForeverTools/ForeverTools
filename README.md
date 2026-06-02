@@ -6,6 +6,7 @@
 
 | Package | Description | NuGet |
 |---------|-------------|-------|
+| **ForeverTools.Mcp** | MCP server for Claude Code — AI tools (summarize, translate, sentiment, OCR) via BYOK | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Mcp.svg)](https://www.nuget.org/packages/ForeverTools.Mcp) |
 | **ForeverTools.AIML** | Access 400+ AI models (GPT-4, Claude, Llama, Gemini, DALL-E, Stable Diffusion) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.AIML.svg)](https://www.nuget.org/packages/ForeverTools.AIML) |
 | **ForeverTools.APILayer** | IP geolocation, currency exchange, phone & email validation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.APILayer.svg)](https://www.nuget.org/packages/ForeverTools.APILayer) |
 | **ForeverTools.Captcha** | Multi-provider captcha solving (2Captcha, CapSolver, Anti-Captcha) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Captcha.svg)](https://www.nuget.org/packages/ForeverTools.Captcha) |
@@ -18,17 +19,14 @@
 | **ForeverTools.Summarize** | AI-powered text summarization (TL;DR, bullet points, executive) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Summarize.svg)](https://www.nuget.org/packages/ForeverTools.Summarize) |
 | **ForeverTools.Translate** | AI-powered translation with 100+ languages (GPT-4, Claude) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Translate.svg)](https://www.nuget.org/packages/ForeverTools.Translate) |
 | **ForeverTools.Apify** | Web scraping platform with 1,600+ actors | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Apify.svg)](https://www.nuget.org/packages/ForeverTools.Apify) |
-
-## Coming Soon
-
-| Package | Description |
-|---------|-------------|
-| **ForeverTools.Sentiment** | AI sentiment analysis with emotion detection (Positive/Negative/Neutral + 6 emotions) |
-| **ForeverTools.TTS** | Text-to-Speech synthesis with 30+ voices via AI/ML API |
-| **ForeverTools.InvoiceParser** | AI-powered invoice and receipt data extraction (vendor, totals, line items) |
-| **ForeverTools.ContentMod** | AI content moderation — toxicity, hate speech, adult content detection |
-| **ForeverTools.CodeGen** | AI code generation, refactoring, and explanation |
-| **ForeverTools.EmailAI** | AI email composition, reply drafting, summarization, and classification |
+| **ForeverTools.Sentiment** | AI sentiment analysis with emotion detection (Positive/Negative/Neutral + 6 emotions) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.Sentiment.svg)](https://www.nuget.org/packages/ForeverTools.Sentiment) |
+| **ForeverTools.TTS** | Text-to-Speech synthesis with 30+ voices via AI/ML API | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.TTS.svg)](https://www.nuget.org/packages/ForeverTools.TTS) |
+| **ForeverTools.InvoiceParser** | AI-powered invoice and receipt data extraction (vendor, totals, line items) | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.InvoiceParser.svg)](https://www.nuget.org/packages/ForeverTools.InvoiceParser) |
+| **ForeverTools.ContentMod** | AI content moderation — toxicity, hate speech, adult content detection | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.ContentMod.svg)](https://www.nuget.org/packages/ForeverTools.ContentMod) |
+| **ForeverTools.CodeGen** | AI code generation, refactoring, and explanation | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.CodeGen.svg)](https://www.nuget.org/packages/ForeverTools.CodeGen) |
+| **ForeverTools.EmailAI** | AI email composition, reply drafting, summarization, and classification | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.EmailAI.svg)](https://www.nuget.org/packages/ForeverTools.EmailAI) |
+| **ForeverTools.OpenAI** | Clean .NET wrapper for the OpenAI API — chat, streaming, embeddings, DALL-E | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.OpenAI.svg)](https://www.nuget.org/packages/ForeverTools.OpenAI) |
+| **ForeverTools.BrightData** | BrightData Web Scraper API client — structured data at scale from any website | [![NuGet](https://img.shields.io/nuget/v/ForeverTools.BrightData.svg)](https://www.nuget.org/packages/ForeverTools.BrightData) |
 
 ## Premium Proxy Providers
 
@@ -81,6 +79,30 @@ dotnet add package ForeverTools.STT
 
 # Web scraping with Apify (1,600+ actors)
 dotnet add package ForeverTools.Apify
+
+# Sentiment analysis
+dotnet add package ForeverTools.Sentiment
+
+# Text-to-Speech
+dotnet add package ForeverTools.TTS
+
+# Invoice parsing
+dotnet add package ForeverTools.InvoiceParser
+
+# Content moderation
+dotnet add package ForeverTools.ContentMod
+
+# Code generation
+dotnet add package ForeverTools.CodeGen
+
+# Email AI
+dotnet add package ForeverTools.EmailAI
+
+# OpenAI wrapper
+dotnet add package ForeverTools.OpenAI
+
+# BrightData web scraper
+dotnet add package ForeverTools.BrightData
 ```
 
 ## Quick Examples
