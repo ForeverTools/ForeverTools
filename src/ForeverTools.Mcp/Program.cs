@@ -18,6 +18,7 @@ builder.Services
     .WithTools<SentimentTool>()
     .WithTools<OcrTool>()
     .WithTools<SttTool>()
-    .WithTools<ImageGenTool>();
+    .WithTools<ImageGenTool>()
+    .WithTools<WebTool>();
 
 await builder.Build().RunAsync();
