@@ -1,10 +1,10 @@
 {
   "mcpServers": {
     "forevertools": {
-      "command": "forevertools-mcp",
-      "args": [],
+      "command": "uvx",
+      "args": ["forevertools-mcp"],
       "env": {
-        "AIML_API_KEY": ""
+        "FOREVERTOOLS_API_KEY": ""
       }
     }
   }
