@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "forevertools": {
+      "command": "forevertools-mcp",
+      "args": [],
+      "env": {
+        "AIML_API_KEY": ""
+      }
+    }
+  }
+}
