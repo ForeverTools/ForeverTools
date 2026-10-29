@@ -607,7 +607,7 @@ public class ApifyClientTests
     [Fact]
     public void PopularActors_News_HasCorrectValues()
     {
-        Assert.Equal("apify/news-scraper", PopularActors.NewsScraper);
+        Assert.Equal("johnvc/GoogleNewsAPI", PopularActors.NewsScraper);
         Assert.Equal("lukaskrivka/article-extractor-smart", PopularActors.ArticleExtractor);
         Assert.Equal("apify/contact-info-scraper", PopularActors.ContactInfoScraper);
     }

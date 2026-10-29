@@ -222,9 +222,9 @@ public static class PopularActors
     #region News & Data
 
     /// <summary>
-    /// News Scraper - Scrape news articles from various sources.
+    /// News Scraper - Search Google News for articles by query.
     /// </summary>
-    public const string NewsScraper = "apify/news-scraper";
+    public const string NewsScraper = "johnvc/GoogleNewsAPI";
 
     /// <summary>
     /// Article Text Extractor - Extract clean text from articles.
